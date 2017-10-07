@@ -1,0 +1,16 @@
+// Guide style
+.guide-wrap{
+    padding: 20px;
+
+    & > *{
+        margin-bottom: 15px;
+    }
+}
+// main style
+main{
+    padding-left: $asideWidht;
+    padding-top: 60px;
+}
+.links .table{
+    margin: $defaultIndent 0;
+}
