@@ -5,6 +5,9 @@
     & > *{
         margin-bottom: 15px;
     }
+    &.range-slider-wrap{
+        height: 100px;
+    }
 }
 // main style
 main{
@@ -13,4 +16,16 @@ main{
 }
 .links .table{
     margin: $defaultIndent 0;
+}
+
+.generated-link-form{
+
+    .form-control{
+        flex-grow: 1;
+        margin-right: 16px;
+    }
+    .icon{
+        font-size: 16px;
+        padding-right: 12px;
+    }
 }

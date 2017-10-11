@@ -64,7 +64,11 @@
         }
     }
 }
-
+.close-modal-btn{
+    font-size: 13px;
+    font-weight: $fontBold;
+    color: $darkGrey;
+}
 // table
 .table{
     border-collapse: collapse;
@@ -80,6 +84,12 @@
             }
             &:hover{
                 background-color: $tableTrHover;
+                
+                .icon-wrap{
+                &.icon-show-hover{
+                    display: inline-block;
+                } 
+                }
             }
         }
     }
@@ -90,9 +100,28 @@
             color: $grey; 
         }
         td{
+           position: relative;
            padding: 18px; 
            border-top: 1px solid $lightGrey;
-
+            .icon-wrap{
+            &.icon-show-hover{
+                display: none;
+                position: absolute;
+                right: 22px;
+                
+                .icon{
+                   color: $darkGrey; 
+                   
+                   &:hover{
+                       color: $orange;
+                   }
+                                
+                &+.icon{
+                    margin-left: 22px;
+                }
+                }
+            }
+            }
            &.td-title{
                font-size: 16px;
                color: $grey;
@@ -141,10 +170,16 @@
     border-bottom: 1px solid $inputBorderColor;
 }
 
-
 // data input
 .datepicker-form{
     
+    .date-control{
+        color: $black;
+        font-family: $fontFamily;
+        font-size: $fontSize;
+    }
+
+
     .btn{
         vertical-align: middle;
         margin-left: 12px;
@@ -176,17 +211,15 @@
     padding: 13px 16px; 
     font-size: $inputTextFontSize;
         
-    &.disabled{
+    input[disabled]{
         background-color: $lightGrey;
-        
-        &:hover{
-            border-color: $lightGrey;
-        }
+        cursor: not-allowed;
     }
     
     &.textarea{
         font-size: $inputTextareaFontSize;
         padding: 19px 17px;
+        resize: none;
     }
 
    &:hover{
@@ -197,27 +230,6 @@
         border-color: $inputFocusBorderColor;
     }
 }
-// input modal
-.input-wrap-row{
-    & + .input-wrap-row{
-        margin-top: 36px;
-    }
-
-    .input-group{
-
-    & + .input-group{
-        margin-left: $defaultIndent;
-    }
-        label{
-            display: block;
-            padding-bottom: $defaultIndent;
-        }
-        .input-filtres{
-            width: 100%;
-        }
-    }
-}
-
 
 // container
 .container-fluid{
@@ -318,7 +330,7 @@
         ul{
             li{
                 color: $darkGrey;
-                
+            
                 &.active{
                     a{
                         @extend %activeLink;
@@ -396,6 +408,9 @@
     .panel-body{
         padding: 0 $defaultIndent;
         
+        &.panel-details{
+            padding: $defaultIndent;
+        }
         .panel-form{
             padding: 40px 0;
             border-bottom: 1px solid $lightGrey;
@@ -461,23 +476,187 @@
         padding: 40px 0;
     }
     .chart{
-        padding-bottom: 50px 0;
+        padding-bottom: 50px;
     }
 }
 // modal
 .modal{
     background-color: #fff;
-    width: 1074px;
+    display: none;
     
     .modal-header{
         padding: $defaultIndent;
         border-bottom: 1px solid $lightGrey;
     }
     .modal-body{
+        padding: 0 $defaultIndent;
 
         .filtres{
-            padding: 24px $defaultIndent;
+            padding: 24px;
             border-bottom: 1px solid $lightGrey;
+                
+            .input-wrap-row{
+                
+                & + .input-wrap-row{
+                    margin-top: 36px;
+                }
+
+                .input-group{
+                    
+                & + .input-group{
+                    margin-left: $defaultIndent;
+                }
+                
+                label{
+                    display: block;
+                    padding-bottom: $defaultIndent;
+                }
+                .input-filtres{
+                    width: 100%;
+                }
+                }   
+            }
+        }
+    }
+    .modal-footer{
+        padding: $defaultIndent;
+        border-top: 1px solid $lightGrey;
+    }
+}
+
+// checkbox-wrap
+.checkbox-wrap{
+    padding: 30px 0;
+
+    .checkboxes{
+        padding-top: 30px;
+        
+        .scrollbar-inner{
+            flex-wrap: wrap;
+            height: 515px;
+        }
+        .checkbox-group{
+            padding: 12px;
+            margin-right: $defaultIndent;
+            
+            .icon{
+                margin-left: auto;
+                
+                &.link-show{
+                    display: none;
+                }
+            }
+            &:hover{
+                background-color:$xsLightGrey;
+                
+                .link-show{
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+}
+
+#add-links-modal{
+    width: 1075px;
+
+    .checkbox-group{
+        width: 30%;
+    }
+}
+
+// checkbox and radio btn
+input{
+    
+    &[type="checkbox"]{
+        display: none;
+
+        & + label{
+            font-size: 14px;
+            color: $black;
+            cursor: pointer;
+
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                border: 1px solid $lightGrey;
+                background-color: #fff;
+                margin-right: 16px;
+
+            }
+        }
+        &:checked{
+            & + label{
+                &::before{
+                    background: $green url(../img/checkbox-bg.png) no-repeat center;
+
+                }
+            }
+        }
+    }
+}
+
+// range slider
+#slider{
+    .ui-widget-header{
+        background-color: $orange;
+        border: none;
+        border-radius: 0px;
+    }
+    &.ui-widget{
+    &.ui-widget-content{
+        border: none;
+        background-color: $lightGrey;
+        border-radius: 0px;
+    }
+    }
+    &.ui-slider-horizontal{
+        height: 0.5em;
+    }
+    #custom-handle{
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-bottom: 23px solid transparent;
+    border-top: none;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
+    border-bottom-color: $orange;
+    background-color: transparent;
+    outline: none;
+    span{
+        position: absolute;
+        top: 35px;
+        left: -22px;
+        font-size: 14px;
+        font-family: $fontLight;
+        color: $black;
+    }   
+    }
+}
+
+//select 
+.filtres{
+    
+    .input-wrap-row{
+
+        .filtres-company{
+            width: 895px;
+            
+            .input-group{
+                width: 50%;
+                
+                input{
+                    width: 100%;
+                }
+            }
+        }
+        .filtres-lang{
+            width: 133px;
+            margin-left: $defaultIndent;
         }
     }
 }

@@ -5,7 +5,7 @@ $fontRegular: 400;
 $fontMedium: 500;
 $fontBold: 700;
 $lineHeight: 1;
-$fontSize: 12px;
+$fontSize: 14px;
 
 // Color var 
 $black: #333;
@@ -23,14 +23,17 @@ $pink: #de5252;
 $lightPink: #ec7171; 
 $blue: #56819f;
 
+// background
+$white-bg: #fff;
+
 // Default padding 
-$defaultlndent: 18px;
+$defaultIndent: 18px;
 
 // Component var
 // Link component 
 $linkColor: #56819f; 
 $linkHoverColor: #ffa200; 
-$linkFontSizeDefault: 13px; 
+$linkFontSize: 13px; 
 $linkLargeFont: 16px;
 
 // Title component 
@@ -50,8 +53,18 @@ $btnDisabledBgHover: $lightGrey;
 
 // Table component 
 $tableFontSize: 13px; 
-$tableTrHover: #f1f3f3
+$tableTrHover: #f1f3f3;
 
 // Aside component 
-$asideBg: #191919; 
-$asideWidth: 188px;
+$asideBg: #191919;
+$asideWidht: 188px;
+
+// input
+$inputBorderColor: $lightGrey;
+$inputFontWeight: $fontLight;
+$inputTextColor: $black;
+$inputTextFontSize: 14px;
+$inputTextareaFontSize: 12px;
+$inputHoverBorderColor:#b1b1b1;
+$inputFocusBorderColor:$lightGrey;
+
