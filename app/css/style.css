@@ -54,6 +54,9 @@ option, option:hover {
 .text-center {
   text-align: center; }
 
+.text-right {
+  text-align: right; }
+
 .fixed-to-top {
   position: fixed;
   z-index: 99;
@@ -95,6 +98,64 @@ option, option:hover {
       -ms-flex-positive: 2;
           flex-grow: 2; }
 
+#loading {
+  background-color: #f58220;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  margin-top: 0px;
+  top: 0px;
+  -webkit-transition: opacity .3s linear, z-index .1s linear .3s;
+  -o-transition: opacity .3s linear, z-index .1s linear .3s;
+  transition: opacity .3s linear, z-index .1s linear .3s; }
+  #loading.hide {
+    z-index: -1;
+    opacity: 0; }
+
+#loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px; }
+
+#object {
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px; }
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: perspective(160px); }
+  50% {
+    -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% {
+    -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); } }
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); }
+  50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg); }
+  100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg); } }
+
 .page-title, .page-title.small-title, .section-title {
   color: #a6a6a6;
   font-size: 16px;
@@ -102,6 +163,8 @@ option, option:hover {
 
 .page-title {
   text-transform: uppercase; }
+  .page-title.color-red {
+    color: #ff0000; }
   .page-title.small-title {
     font-size: 14px; }
 
@@ -141,6 +204,21 @@ option, option:hover {
   font-weight: 700;
   color: #979797; }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0; }
+  .dropdown-menu ul li {
+    padding: 10px 18px; }
+
+.dropdown-wrap {
+  position: relative; }
+
 .table {
   border-collapse: collapse;
   font-size: 13px; }
@@ -154,7 +232,8 @@ option, option:hover {
       display: inline-block; }
   .table tr th {
     padding: 30px 18px;
-    color: #bababa; }
+    color: #bababa;
+    text-align: start; }
   .table tr td {
     position: relative;
     padding: 18px;
@@ -195,7 +274,7 @@ option, option:hover {
     display: inline-block; }
     .pagination li a {
       display: inline-block;
-      padding: 12px 17px; }
+      padding: 12px 16px; }
 
 .panel-date {
   padding: 30px 0;
@@ -231,7 +310,7 @@ option, option:hover {
           border-radius: 2px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #333;
+  color: #979797;
   padding: 13px 16px;
   font-size: 14px; }
   .form-control input[disabled] {
@@ -242,9 +321,11 @@ option, option:hover {
     padding: 19px 17px;
     resize: none; }
   .form-control:hover {
-    border-color: #b1b1b1; }
+    border-color: #b1b1b1;
+    color: #333; }
   .form-control:focus {
-    border-color: #e3e3e3; }
+    border-color: #e3e3e3;
+    color: #333; }
 
 .container-fluid {
   padding: 18px; }
@@ -377,7 +458,7 @@ option, option:hover {
         .panel .panel-body .panel-form form .label-group + .label-group {
           margin-top: 15px; }
   .panel .panel-footer {
-    padding: 30px 0; }
+    padding: 18px; }
 
 .label-group {
   display: -webkit-box;
@@ -423,6 +504,19 @@ option, option:hover {
       border-bottom: 1px solid #e3e3e3; }
       .modal .modal-body .filtres .input-wrap-row + .input-wrap-row {
         margin-top: 36px; }
+      .modal .modal-body .filtres .input-wrap-row .filtres-company {
+        width: 895px; }
+        .modal .modal-body .filtres .input-wrap-row .filtres-company .input-group {
+          width: 50%; }
+          .modal .modal-body .filtres .input-wrap-row .filtres-company .input-group input {
+            width: 100%; }
+      .modal .modal-body .filtres .input-wrap-row .filtres-design {
+        width: 100%; }
+        .modal .modal-body .filtres .input-wrap-row .filtres-design .input-group {
+          width: 100%; }
+      .modal .modal-body .filtres .input-wrap-row .filtres-lang {
+        width: 133px;
+        margin-left: 18px; }
       .modal .modal-body .filtres .input-wrap-row .input-group + .input-group {
         margin-left: 18px; }
       .modal .modal-body .filtres .input-wrap-row .input-group label {
@@ -430,12 +524,39 @@ option, option:hover {
         padding-bottom: 18px; }
       .modal .modal-body .filtres .input-wrap-row .input-group .input-filtres {
         width: 100%; }
+    .modal .modal-body.login {
+      padding: 45px; }
+      .modal .modal-body.login .input-login {
+        width: 100%; }
+        .modal .modal-body.login .input-login .input-user-data {
+          position: relative; }
+          .modal .modal-body.login .input-login .input-user-data label {
+            position: absolute;
+            font-size: 18px;
+            left: 18px;
+            color: #979797; }
+          .modal .modal-body.login .input-login .input-user-data input {
+            width: 214px; }
+            .modal .modal-body.login .input-login .input-user-data input#loginName {
+              padding-left: 42px; }
+              .modal .modal-body.login .input-login .input-user-data input#loginName:hover label {
+                color: #333; }
+              .modal .modal-body.login .input-login .input-user-data input#loginName:focus label {
+                color: #333; }
+            .modal .modal-body.login .input-login .input-user-data input#password {
+              padding-left: 52px; }
+        .modal .modal-body.login .input-login button {
+          width: 165px; }
   .modal .modal-footer {
     padding: 18px;
     border-top: 1px solid #e3e3e3; }
 
 .checkbox-wrap {
   padding: 30px 0; }
+  .checkbox-wrap + .checkbox-wrap {
+    padding-left: 18px;
+    margin-left: 18px;
+    border-left: 1px solid #e3e3e3; }
   .checkbox-wrap .checkboxes {
     padding-top: 30px; }
     .checkbox-wrap .checkboxes .scrollbar-inner {
@@ -445,9 +566,11 @@ option, option:hover {
       height: 515px; }
     .checkbox-wrap .checkboxes .checkbox-group {
       padding: 12px;
-      margin-right: 18px; }
+      margin-right: 18px;
+      position: relative; }
       .checkbox-wrap .checkboxes .checkbox-group .icon {
-        margin-left: auto; }
+        position: absolute;
+        right: 12px; }
         .checkbox-wrap .checkboxes .checkbox-group .icon.link-show {
           display: none; }
       .checkbox-wrap .checkboxes .checkbox-group:hover {
@@ -459,6 +582,14 @@ option, option:hover {
   width: 1075px; }
   #add-links-modal .checkbox-group {
     width: 30%; }
+
+#add-banners-modal {
+  width: 1075px; }
+  #add-banners-modal .checkbox-group {
+    width: 93%; }
+
+#login-modal {
+  width: 720px; }
 
 input[type="checkbox"] {
   display: none; }
@@ -511,16 +642,46 @@ input[type="checkbox"] {
     font-family: 300;
     color: #333; }
 
-.filtres .input-wrap-row .filtres-company {
-  width: 895px; }
-  .filtres .input-wrap-row .filtres-company .input-group {
+.panel-form-postback {
+  padding: 36px 18px;
+  border-bottom: 1px solid #e3e3e3; }
+  .panel-form-postback .filtres-postback {
+    width: 100%; }
+    .panel-form-postback .filtres-postback .input-group {
+      width: 33.33%; }
+      .panel-form-postback .filtres-postback .input-group + .input-group {
+        margin-left: 18px; }
+      .panel-form-postback .filtres-postback .input-group label {
+        display: block;
+        margin: 22px 0; }
+  .panel-form-postback .panel-form-postback-wrap .panel-form-message {
     width: 50%; }
-    .filtres .input-wrap-row .filtres-company .input-group input {
-      width: 100%; }
+    .panel-form-postback .panel-form-postback-wrap .panel-form-message + .panel-form-message {
+      margin-left: 18px; }
+    .panel-form-postback .panel-form-postback-wrap .panel-form-message .form-name {
+      margin: 22px 0; }
+    .panel-form-postback .panel-form-postback-wrap .panel-form-message .textarea {
+      width: 100%;
+      height: 185px; }
 
-.filtres .input-wrap-row .filtres-lang {
-  width: 133px;
-  margin-left: 18px; }
+.postback-statuses {
+  border-bottom: 1px solid #e3e3e3; }
+  .postback-statuses .postback-statuses-checkbox {
+    width: 50%;
+    padding: 0 18px; }
+    .postback-statuses .postback-statuses-checkbox .scrollbar-inner {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      height: 180px; }
+      .postback-statuses .postback-statuses-checkbox .scrollbar-inner .checkbox-group {
+        width: 93%; }
+  .postback-statuses .postback-statuses-slider {
+    width: 50%;
+    padding: 30px 18px;
+    border-left: 1px solid #e3e3e3; }
+    .postback-statuses .postback-statuses-slider .postback-slider {
+      margin-top: 50px; }
 
 .jq-checkbox,
 .jq-radio {
@@ -803,6 +964,19 @@ input[type="checkbox"] {
           border-radius: 2px;
   background: #FFF; }
 
+.filtres-lang .jq-selectbox__dropdown ul li {
+  padding-left: 56px; }
+  .filtres-lang .jq-selectbox__dropdown ul li.lang-en {
+    background: url(../img/lang-gb-bg.png) no-repeat 14px 8px; }
+  .filtres-lang .jq-selectbox__dropdown ul li.lang-ru {
+    background: url(../img/lang-ru-bg.png) no-repeat 14px 8px; }
+  .filtres-lang .jq-selectbox__dropdown ul li.lang-ua {
+    background: url(../img/lang-ua-bg.png) no-repeat 14px 8px; }
+  .filtres-lang .jq-selectbox__dropdown ul li.selected {
+    background-color: #e3e3e3; }
+  .filtres-lang .jq-selectbox__dropdown ul li:hover {
+    background-color: #e3e3e3; }
+
 .jq-selectbox ul {
   margin: 0;
   padding: 0; }
@@ -989,7 +1163,7 @@ input[type='submit'].styler[disabled] {
   white-space: nowrap; }
 
 .jq-selectbox {
-  z-index: 10; }
+  z-index: 11; }
 
 .jq-selectbox__select {
   position: relative; }
@@ -1805,3 +1979,57 @@ main {
 .generated-link-form .icon {
   font-size: 16px;
   padding-right: 12px; }
+
+._mobileSidebar main {
+  padding-left: 60px; }
+
+._mobileSidebar .aside {
+  width: 60px;
+  overflow-y: visible; }
+  ._mobileSidebar .aside .logo {
+    display: none; }
+  ._mobileSidebar .aside .menu-controls {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  ._mobileSidebar .aside .aside-menu li {
+    text-align: center;
+    position: relative; }
+    ._mobileSidebar .aside .aside-menu li:hover .menu-link {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+  ._mobileSidebar .aside .aside-menu a .icon {
+    margin-right: 0; }
+  ._mobileSidebar .aside .aside-menu a .menu-link {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    min-width: 150px;
+    background-color: #333;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 20px; }
+  ._mobileSidebar .aside .your-manager {
+    padding-left: 5px;
+    padding-right: 5px; }
+    ._mobileSidebar .aside .your-manager .page-title {
+      display: none; }
+    ._mobileSidebar .aside .your-manager .manager-info {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      ._mobileSidebar .aside .your-manager .manager-info .manager-foto {
+        margin-right: 0; }
+        ._mobileSidebar .aside .your-manager .manager-info .manager-foto img {
+          width: 40px;
+          height: 40px; }
+      ._mobileSidebar .aside .your-manager .manager-info .link {
+        display: none; }

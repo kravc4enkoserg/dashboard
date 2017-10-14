@@ -106,7 +106,7 @@ gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass', 'iconfon
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
     gulp.watch('src/scss/**/*.scss', browserSync.reload);   // Наблюдение за JS файлами в папке js
     gulp.watch('src/icons/*.svg', browserSync.reload);   // Наблюдение за JS файлами в папке js
-    gulp.watch('app/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
+    gulp.watch('src/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('img', function() {

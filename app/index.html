@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Template</title>
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <!-- jQuery -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- myfont -->
@@ -16,426 +17,487 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-<!-- Header Start -->
-<header class="fixed-to-top header">
-    <div class="flex-container justify-content-end ">
-        <div class="user-controls flex-container align-items-center">
-            <div class="user-controls-item flex-container align-items-center">
-                <a class="icon icon-wallet"></a> 
-                $1,500.00 
-                <a class="icon icon-arrow-down"></a>
+    <!-- Header Start -->
+    <header class="fixed-to-top header">
+        <div class="flex-container justify-content-end ">
+            <div class="user-controls flex-container align-items-center">
+                <div class="user-controls-item flex-container align-items-center dropdown-wrap">
+                    <a class="icon icon-wallet"></a>
+                    <span>$1,500.00</span>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>
+                                <a class="link link-large" href="">link</a>
+                            </li>
+                            <li>
+                                <a class="link link-large" href="">link</a>
+                            </li>
+                            <li>
+                                <a class="link link-large" href="">link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="icon icon-arrow-down"></a>
+                </div>
+                <div class="user-controls-item ">
+                    <a class="icon icon-notification">
+                        <span class="user-controls-notification"></span>
+                    </a>
+                </div>
+                <div class="user-controls-item flex-container align-items-center dropdown-wrap">
+                    <a data-modal="#login-modal" class="icon icon-profile"></a>
+                    <a href="" class="link">Leonardo Dicaprio</a>
+                </div>
+                <div class="user-controls-item">
+                    <a class="icon icon-quit"></a>
+                </div>
             </div>
-            <div class="user-controls-item ">
-                <a class="icon icon-notification">
-                    <span class="user-controls-notification"></span>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Aside Start -->
+    <aside class="aside fixed-to-top">
+        <div class="menu-controls flex-container justify-content-sb align-items-center">
+            <div class="logo">
+                <a href="">
+                    <img src="../img/logo.png" alt="">
                 </a>
             </div>
-            <div class="user-controls-item flex-container align-items-center">
-                <a class="icon icon-profile"></a>
-                <a href="" class="link">Leonardo Dicaprio</a>
-            </div>
-            <div class="user-controls-item">
-                <a class="icon icon-quit"></a>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
-</header>
-<!-- Header End -->
-<!-- Aside Start -->
-<aside class="aside fixed-to-top">
-    <div class="menu-controls flex-container justify-content-sb align-items-center">
-        <div class="logo">
-            <a href=""><img src="../img/logo.png" alt=""></a>
-        </div>
-        <div class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <div class="aside-menu">
-        <ul>
-            <li class="active"><a href=""><span class="icon icon-general"></span>General</a></li>
-            <li><a href="details.html"><span class="icon icon-details"></span> Details</a></li>
-            <li><a href="links.html"><span class="icon icon-links"></span>Links</a></li>
-            <li><a href="banners.html"><span class="icon icon-banners"></span>Banners</a></li>
-            <li><a href="personal-data.html"><span class="icon icon-personaldata"></span>Personal data</a></li>
-            <li><a href="payout.html"><span class="icon icon-payout"></span>Payout</a></li>
-            <li><a href="postback.html"><span class="icon icon-postback"></span>Postback</a></li>
-        </ul>
-        <div class="your-manager">
-            <h3 class="page-title small-title">Your manager</h3>
-            <div class="manager-info flex-container align-items-center">
-                <div class="manager-foto">
-                    <img src="..//img/manager-foto.png" alt="">
-                    <div class="status online"></div>
-                </div>
-                <a href= "" class="link">Mikhael E.</a>
-            </div>
-        </div>
-    </div>
-</aside>
-<!-- Aside End -->
-<main>
-    <div class="content-wrapper">
-        <div class="panel">
-            <div class="panel-header">
-                <h3 class="page-title">General Statistic</h3>
-            </div>
-            <div class="panel-date text-center">
-                <div class="datepicker-form">
-                    <div class="date-wrap-input">
-                        <input type="text" id="from" name="from" class="date-control">
-                        <input type="text" id="to" name="to" class="date-control">
+        <div class="aside-menu">
+            <ul>
+                <li class="active">
+                    <a href="index.html">
+                        <span class="text-center icon icon-general"></span>
+                        <span class="menu-link">General</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="details.html">
+                        <span class="text-center icon icon-details"></span>
+                        <span class="menu-link">Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="links.html">
+                        <span class="text-center icon icon-links"></span>
+                        <span class="menu-link">Links</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" data-modal="#add-banners-modal">
+                        <span class="text-center icon icon-banners"></span>
+                        <span class="menu-link">Banners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="personal-data.html">
+                        <span class="text-center icon icon-personaldata"></span>
+                        <span class="menu-link">Personal data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="payout.html">
+                        <span class="text-center icon icon-payout"></span>
+                        <span class="menu-link">Payout</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="postback.html">
+                        <span class="text-center icon icon-postback"></span>
+                        <span class="menu-link">Postback</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="your-manager">
+                <h3 class="page-title small-title">Your manager</h3>
+                <div class="manager-info flex-container align-items-center">
+                    <div class="manager-foto">
+                        <img src="..//img/manager-foto.png" alt="">
+                        <div class="status online"></div>
                     </div>
-                    <button class="btn btn-action"><span class="icon icon-refresh"></span></button>
+                    <a href="" class="link">Mikhael E.</a>
                 </div>
-            </div> 
-            <div class="panel-body">
-                <div class="container container-sm">
-                    <div class="list-wrap flex-container justify-content-sb align-items-center">
-                        <ul class="list">
-                            <li class="list-element flex-container justify-content-sb section-title">Visit Signups<span class="count">124</span></li>
-                            <li class="list-element flex-container justify-content-sb section-title">FTD<span class="count">445</span></li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list-element flex-container justify-content-sb section-title">Net deposit<span class="count">564</span></li>
-                            <li class="list-element flex-container justify-content-sb section-title">Turn over<span class="count">432</span></li>
-                        </ul>   
-                    </div>
-                    <div class="chart-wrap">
-                        <div class="chart-title">
-                            <h3 class="section-title">Earnings chart</h3>
+            </div>
+        </div>
+    </aside>
+    <!-- Aside End -->
+    <main>
+        <div class="content-wrapper">
+            <div class="panel">
+                <div class="panel-header">
+                    <h3 class="page-title">General Statistic</h3>
+                </div>
+                <div class="panel-date text-center">
+                    <div class="datepicker-form">
+                        <div class="date-wrap-input">
+                            <input type="text" id="from" name="from" class="date-control">
+                            <input type="text" id="to" name="to" class="date-control">
                         </div>
-                        <div class="chart">
-                            <canvas id="myChart" width="400" height="400"></canvas>
+                        <button class="btn btn-action">
+                            <span class="icon icon-refresh"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="container container-sm">
+                        <div class="list-wrap flex-container justify-content-sb align-items-center">
+                            <ul class="list">
+                                <li class="list-element flex-container justify-content-sb section-title">Visit Signups
+                                    <span class="count">124</span>
+                                </li>
+                                <li class="list-element flex-container justify-content-sb section-title">FTD
+                                    <span class="count">445</span>
+                                </li>
+                            </ul>
+                            <ul class="list">
+                                <li class="list-element flex-container justify-content-sb section-title">Net deposit
+                                    <span class="count">564</span>
+                                </li>
+                                <li class="list-element flex-container justify-content-sb section-title">Turn over
+                                    <span class="count">432</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chart-wrap">
+                            <div class="chart-title">
+                                <h3 class="section-title">Earnings chart</h3>
+                            </div>
+                            <div class="chart">
+                                <canvas id="myChart" width="680" height="240"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="panel links">
-            <div class="panel-header">
-                <h3 class="page-title">Links</h3>
-            </div>
-            <div class="panel-body">
-                <div class="btn-row text-center">
-                    <a href="" class="btn btn-action" data-modal="#add-links-modal"> edd new</a>
+            <div class="panel links">
+                <div class="panel-header">
+                    <h3 class="page-title">Links</h3>
                 </div>
-                <div class="container-sm">
-                    <table class="table full-widht">
-                        <tbody>
-                            <tr>
-                                <td class="text-bold td-title">Home page</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.homepage.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div>  
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Currently offer</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.currently.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Blurpix</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.blurpix.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Your Site</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.yoursite.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Google</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.google.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Facebook</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.facebook.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Dashboard</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.dashboard.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Currently offer</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.currently.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Blurax</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.blurax.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Piece of Wine</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.pieceofwine.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-bold td-title">Twitter</td>
-                                <td>
-                                    <a href="" class="link link-large">http://www.twitter.com</a>
-                                    <div class="icon-wrap icon-show-hover">
-                                        <a href="" class="icon icon-links link link-large"></a>
-                                        <a href="" class="icon icon-trash link link-large"></a>
-                                    </div> 
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="panel-body">
                     <div class="btn-row text-center">
-                        <a href="" class="btn btn-action" data-modal="#add-links-modal"> add new</a>
+                        <a href="" class="btn btn-action" data-modal="#add-links-modal">+ edd new</a>
+                    </div>
+                    <div class="container-sm">
+                        <table class="table full-widht">
+                            <tbody>
+                                <tr>
+                                    <td class="text-bold td-title">Home page</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.homepage.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Currently offer</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.currently.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Blurpix</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.blurpix.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Your Site</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.yoursite.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Google</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.google.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Facebook</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.facebook.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Dashboard</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.dashboard.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Currently offer</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.currently.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Blurax</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.blurax.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Piece of Wine</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.pieceofwine.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold td-title">Twitter</td>
+                                    <td>
+                                        <a href="" class="link link-large">http://www.twitter.com</a>
+                                        <div class="icon-wrap icon-show-hover">
+                                            <a href="" class="icon icon-links link link-large"></a>
+                                            <a href="" class="icon icon-trash link link-large"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-row text-center">
+                            <a href="" class="btn btn-action" data-modal="#add-links-modal">+ add new</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<!-- MODAL add links -->
-<div class="modal" id="add-links-modal">
-    <div class="modal-header flex-container justify-content-sb">
-        <h3 class="page-title">Add Url</h3>
-        <span class="icon icon-close close-modal-btn"></span>
-    </div>
-    <div class="modal-body">
-        <div class="filtres row">
-            <div class="input-wrap-row flex-container">
-                <div class="filtres-company flex-container">
-                    <div class="input-group">
-                        <label for="scheme-name" class="section-title">Scheme name</label>
-                        <input type="text" class="form-control" placeholder="Name" id="scheme-name">
+    <!-- MODAL add links -->
+    <div class="modal" id="add-links-modal">
+        <div class="modal-header flex-container justify-content-sb">
+            <h3 class="page-title">Add Url</h3>
+            <span class="icon icon-close close-modal-btn"></span>
+        </div>
+        <div class="modal-body">
+            <div class="filtres row">
+                <div class="input-wrap-row flex-container">
+                    <div class="filtres-company flex-container">
+                        <div class="input-group">
+                            <label for="scheme-name" class="section-title">Scheme name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="scheme-name">
+                        </div>
+                        <div class="input-group">
+                            <label for="select-compain" class="section-title">Compain</label>
+                            <select name="" id="select-compain">
+                                <option value="">Select compain</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label for="select-compain" class="section-title">Compain</label>
-                        <select name="" id="select-compain">
-                            <option value="">Select compain</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
+                    <div class="input-group filtres-lang">
+                        <label for="select-language" class="section-title">Language</label>
+                        <select name="" id="select-language" class="input-filtres-lang">
+                            <option class="lang-en" value="">EN</option>
+                            <option class="lang-ru" value="">RU</option>
+                            <option class="lang-ua" value="">UA</option>
                         </select>
                     </div>
                 </div>
-                <div class="input-group filtres-lang">
-                    <label for="select-language" class="section-title">Language</label>
-                    <select name="" id="select-language" class="input-filtres-lang">
-                        <option class="lang-en" value="">EN</option>
-                        <option class="lang-ru" value="">RU</option>
-                        <option class="lang-ua" value="">UA</option>
-                    </select>
-                </div>
             </div>
-        </div>
-        <div class="checkbox-wrap">
-            <h3 class="section-title">Select websites</h3>
-            <div class="checkboxes">
-                <div class="flex-container scrollbar-inner">
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link1" id="link1">
-                        <label for="link1" class="flex-container align-items-center">Landing page Money</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link2" id="link2">
-                        <label for="link2" class="flex-container align-items-center">LP Your choise</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link3" id="link3">
-                        <label for="link3" class="flex-container align-items-center">LP Wallet</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link4" id="link4">
-                        <label for="link4" class="flex-container align-items-center">E-Shop 01</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link5" id="link5">
-                        <label for="link5" class="flex-container align-items-center">Toy Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link6" id="link6">
-                        <label for="link6" class="flex-container align-items-center">Book Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link7" id="link7">
-                        <label for="link7" class="flex-container align-items-center">Charity</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link8" id="link8">
-                        <label for="link8" class="flex-container align-items-center">LP Icons Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link9" id="link9">
-                        <label for="link9" class="flex-container align-items-center">Templates Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link10" id="link10">
-                        <label for="link10" class="flex-container align-items-center">Random text</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link11" id="link11">
-                        <label for="link11" class="flex-container align-items-center">Mobile app</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link12" id="link12">
-                        <label for="link12" class="flex-container align-items-center">LP Senator free signals</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link13" id="link13">
-                        <label for="link13" class="flex-container align-items-center">LP DE Your choise</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link14" id="link14">
-                        <label for="link14" class="flex-container align-items-center">Invest wisely</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link15" id="link15">
-                        <label for="link15" class="flex-container align-items-center">Toy Store LP Sign up page</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link16" id="link16">
-                        <label for="link16" class="flex-container align-items-center">Senator Account types</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link17" id="link17">
-                        <label for="link17" class="flex-container align-items-center">Senator Mobile app</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link18" id="link18">
-                        <label for="link18" class="flex-container align-items-center">Senator Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link19" id="link19">
-                        <label for="link19" class="flex-container align-items-center">Senator April Promo</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link20" id="link20">
-                        <label for="link20" class="flex-container align-items-center">Language Learning LP</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link21" id="link21">
-                        <label for="link21" class="flex-container align-items-center">Your second site</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link22" id="link22">
-                        <label for="link22" class="flex-container align-items-center">Your second LP</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link23" id="link23">
-                        <label for="link23" class="flex-container align-items-center">Landing page Money</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link24" id="link24">
-                        <label for="link24" class="flex-container align-items-center">LP Your choise</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link25" id="link25">
-                        <label for="link25" class="flex-container align-items-center">LP Wallet</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link26" id="link25">
-                        <label for="link26" class="flex-container align-items-center">E-Shop 01</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link27" id="link27">
-                        <label for="link27" class="flex-container align-items-center">Toy Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link28" id="link28">
-                        <label for="link28" class="flex-container align-items-center">Book Store</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link29" id="link29">
-                        <label for="link29" class="flex-container align-items-center">Mobile app</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div>
-                    <div class="checkbox-group flex-container aligh-item-center">
-                        <input type="checkbox" name="link30" id="link30">
-                        <label for="link30" class="flex-container align-items-center">LP Senator free signals</label>
-                        <a href="" class="icon icon-show link link-large link-show"></a>
-                    </div> 
-                    <div class="checkbox-group flex-container aligh-item-center">
+            <div class="checkbox-wrap">
+                <h3 class="section-title">Select websites</h3>
+                <div class="checkboxes">
+                    <div class="flex-container scrollbar-inner">
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link1" id="link1">
+                            <label for="link1" class="flex-container align-items-center">Landing page Money</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link2" id="link2">
+                            <label for="link2" class="flex-container align-items-center">LP Your choise</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link3" id="link3">
+                            <label for="link3" class="flex-container align-items-center">LP Wallet</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link4" id="link4">
+                            <label for="link4" class="flex-container align-items-center">E-Shop 01</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link5" id="link5">
+                            <label for="link5" class="flex-container align-items-center">Toy Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link6" id="link6">
+                            <label for="link6" class="flex-container align-items-center">Book Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link7" id="link7">
+                            <label for="link7" class="flex-container align-items-center">Charity</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link8" id="link8">
+                            <label for="link8" class="flex-container align-items-center">LP Icons Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link9" id="link9">
+                            <label for="link9" class="flex-container align-items-center">Templates Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link10" id="link10">
+                            <label for="link10" class="flex-container align-items-center">Random text</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link11" id="link11">
+                            <label for="link11" class="flex-container align-items-center">Mobile app</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link12" id="link12">
+                            <label for="link12" class="flex-container align-items-center">LP Senator free signals</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link13" id="link13">
+                            <label for="link13" class="flex-container align-items-center">LP DE Your choise</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link14" id="link14">
+                            <label for="link14" class="flex-container align-items-center">Invest wisely</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link15" id="link15">
+                            <label for="link15" class="flex-container align-items-center">Toy Store LP Sign up page</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link16" id="link16">
+                            <label for="link16" class="flex-container align-items-center">Senator Account types</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link17" id="link17">
+                            <label for="link17" class="flex-container align-items-center">Senator Mobile app</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link18" id="link18">
+                            <label for="link18" class="flex-container align-items-center">Senator Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link19" id="link19">
+                            <label for="link19" class="flex-container align-items-center">Senator April Promo</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link20" id="link20">
+                            <label for="link20" class="flex-container align-items-center">Language Learning LP</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link21" id="link21">
+                            <label for="link21" class="flex-container align-items-center">Your second site</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link22" id="link22">
+                            <label for="link22" class="flex-container align-items-center">Your second LP</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link23" id="link23">
+                            <label for="link23" class="flex-container align-items-center">Landing page Money</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link24" id="link24">
+                            <label for="link24" class="flex-container align-items-center">LP Your choise</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link25" id="link25">
+                            <label for="link25" class="flex-container align-items-center">LP Wallet</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link26" id="link25">
+                            <label for="link26" class="flex-container align-items-center">E-Shop 01</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link27" id="link27">
+                            <label for="link27" class="flex-container align-items-center">Toy Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link28" id="link28">
+                            <label for="link28" class="flex-container align-items-center">Book Store</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link29" id="link29">
+                            <label for="link29" class="flex-container align-items-center">Mobile app</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
+                            <input type="checkbox" name="link30" id="link30">
+                            <label for="link30" class="flex-container align-items-center">LP Senator free signals</label>
+                            <a href="" class="icon icon-show link link-large link-show"></a>
+                        </div>
+                        <div class="checkbox-group flex-container aligh-item-center">
                             <input type="checkbox" name="link31" id="link31">
                             <label for="link31" class="flex-container align-items-center">Mobile app</label>
                             <a href="" class="icon icon-show link link-large link-show"></a>
@@ -535,27 +597,320 @@
                             <label for="link50" class="flex-container align-items-center">LP Senator free signals</label>
                             <a href="" class="icon icon-show link link-large link-show"></a>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="modal-footer">
+            <form class="flex-container align-items-center generated-link-form">
+                <input type="text" class="form-control" placeholder="Generated link">
+                <button class="btn btn-disabled">
+                    <span class="icon icon-links"></span> Copy link</button>
+                <button class="btn btn-action">Save</button>
+            </form>
+        </div>
     </div>
-    <div class="modal-footer">
-        <form class="flex-container align-items-center generated-link-form">
-            <input type="text" class="form-control" placeholder="Generated link">
-            <button class="btn btn-disabled"><span class="icon icon-links"></span> Copy link</button>
-            <button class="btn btn-action">Save</button>
-        </form>
-    </div>
-</div>
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-<script src="js/jquery.bpopup.min.js"></script>
-<script src=js/jquery.formstyler.min.js></script>
-<script src="js/jquery.scrollbar.js"></script>
-<!-- init plugins -->
-<script src="js/init.js"></script>
+    <!-- MODAL banners -->
+    <div class="modal" id="add-banners-modal">
+        <div class="modal-header flex-container justify-content-sb">
+            <h3 class="page-title">Add banners</h3>
+            <span class="icon icon-close close-modal-btn"></span>
+        </div>
+        <div class="modal-body">
+            <div class="filtres row">
+                <div class="input-wrap-row flex-container">
+                    <div class="filtres-company flex-container">
+                        <div class="input-group">
+                            <label for="scheme-name" class="section-title">Scheme name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="scheme-name">
+                        </div>
+                        <div class="input-group">
+                            <label for="select-compain" class="section-title">Compain</label>
+                            <select name="" id="select-compain">
+                                <option value="">Select compain</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group filtres-lang">
+                        <label for="select-language" class="section-title">Language</label>
+                        <select name="" id="select-language" class="input-filtres-lang">
+                            <option class="lang lang-en" value="">EN</option>
+                            <option class="lang lang-ru" value="">RU</option>
+                            <option class="lang lang-ua" value="">UA</option>
+                        </select>
+                        <!-- <div class="sec lang">
+                            <select>
+                                <option class="lang-en">Английский</option>
+                                <option class="lang-es">Испанский</option>
+                                <option class="lang-de">Немецкий</option>
+                                <option class="lang-ru">Русский</option>
+                                <option class="lang-fr">Французский</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="input-wrap-row flex-container">
+                    <div class="filtres-design flex-container">
+                        <div class="input-group">
+                            <label for="select-weight-height" class="section-title">Weight-Height</label>
+                            <select name="" id="weight-height">
+                                <option value="">Select</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="select-design" class="section-title">Design</label>
+                            <select name="" id="select-design">
+                                <option value="">Select</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="select-file-type" class="section-title">File type</label>
+                            <select name="" id="select-file-type">
+                                <option value="">All</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkboxes-select-banners flex-container">
+                <div class="checkbox-wrap">
+                    <h3 class="section-title">Select banners</h3>
+                    <div class="checkboxes">
+                        <div class="flex-container scrollbar-inner">
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners1" id="banners1">
+                                <label for="banners1" class="flex-container align-items-center">Landing page Money</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners2" id="banners2">
+                                <label for="banners2" class="flex-container align-items-center">LP Your choise</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners3" id="banners3">
+                                <label for="banners3" class="flex-container align-items-center">LP Wallet</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners4" id="banners4">
+                                <label for="banners4" class="flex-container align-items-center">E-Shop 01</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners5" id="banners5">
+                                <label for="banners5" class="flex-container align-items-center">Toy Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners6" id="banners6">
+                                <label for="banners6" class="flex-container align-items-center">Book Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners7" id="banners7">
+                                <label for="banners7" class="flex-container align-items-center">Charity</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners8" id="banners8">
+                                <label for="banners8" class="flex-container align-items-center">LP Icons Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners9" id="banners9">
+                                <label for="banners9" class="flex-container align-items-center">Templates Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners10" id="banners10">
+                                <label for="banners10" class="flex-container align-items-center">Random text</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners11" id="banners11">
+                                <label for="banners11" class="flex-container align-items-center">Mobile app</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners12" id="banners12">
+                                <label for="banners12" class="flex-container align-items-center">LP Senator free signals</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners13" id="banners13">
+                                <label for="banners13" class="flex-container align-items-center">LP DE Your choise</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners14" id="banners14">
+                                <label for="banners14" class="flex-container align-items-center">Invest wisely</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners15" id="banners15">
+                                <label for="banners15" class="flex-container align-items-center">Toy Store LP Sign up page</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="banners16" id="banners16">
+                                <label for="banners16" class="flex-container align-items-center">Senator Account types</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <h3 class="section-title">Select websites</h3>
+                    <div class="checkboxes">
+                        <div class="flex-container scrollbar-inner">
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites1" id="web-sites1">
+                                <label for="web-sites1" class="flex-container align-items-center">Landing page Money</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites2" id="web-sites2">
+                                <label for="web-sites2" class="flex-container align-items-center">LP Your choise</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites3" id="web-sites3">
+                                <label for="web-sites3" class="flex-container align-items-center">LP Wallet</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites4" id="web-sites4">
+                                <label for="web-sites4" class="flex-container align-items-center">E-Shop 01</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites5" id="web-sites5">
+                                <label for="web-sites5" class="flex-container align-items-center">Toy Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites6" id="web-sites6">
+                                <label for="web-sites6" class="flex-container align-items-center">Book Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites7" id="web-sites7">
+                                <label for="web-sites7" class="flex-container align-items-center">Charity</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites8" id="web-sites8">
+                                <label for="web-sites8" class="flex-container align-items-center">LP Icons Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites9" id="web-sites9">
+                                <label for="web-sites9" class="flex-container align-items-center">Templates Store</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites10" id="web-sites10">
+                                <label for="web-sites10" class="flex-container align-items-center">Random text</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites11" id="web-sites11">
+                                <label for="web-sites11" class="flex-container align-items-center">Mobile app</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites12" id="web-sites12">
+                                <label for="web-sites12" class="flex-container align-items-center">LP Senator free signals</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites13" id="web-sites13">
+                                <label for="web-sites13" class="flex-container align-items-center">LP DE Your choise</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites14" id="web-sites14">
+                                <label for="web-sites14" class="flex-container align-items-center">Invest wisely</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites15" id="web-sites15">
+                                <label for="web-sites15" class="flex-container align-items-center">Toy Store LP Sign up page</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                            <div class="checkbox-group flex-container aligh-item-center">
+                                <input type="checkbox" name="web-sites16" id="web-sites16">
+                                <label for="web-sites16" class="flex-container align-items-center">Senator Account types</label>
+                                <a href="" class="icon icon-show link link-large link-show"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <form class="flex-container align-items-center generated-link-form">
+                <input type="text" class="form-control" placeholder="Generated link">
+                <button class="btn btn-disabled">
+                    <span class="icon icon-links"></span> Copy link</button>
+                <button class="btn btn-action">Save</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL login -->
+    <div class="modal" id="login-modal">
+        <div class="modal-header flex-container">
+            <h3 class="page-title">login</h3>
+        </div>
+        <div class="modal-body login flex-container">
+            <form class="flex-container justify-content-sb input-login">
+                <div class="input-user-data flex-container align-items-center">
+                    <label for="loginName"><span class="icon icon-login"></span></label>
+                    <input type="text" class="form-control" placeholder="login name" id="loginName">
+                </div>
+                <div class="input-user-data flex-container align-items-center">
+                    <label for="password"><span class="icon icon-password"></span></label>
+                    <input type="password" class="form-control" placeholder="password" id="password">
+                </div>
+                <button class="btn btn-action">Enter</button>
+            </form>
+        </div>
+    </div>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div id="object"></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src="js/jquery.bpopup.min.js"></script>
+    <script src=js/jquery.formstyler.min.js></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <!-- init plugins -->
+    <script src="js/init.js"></script>
+
+    <!-- plugin js -->
+    <script src="js/plugins.min.js"></script>
 </body>
+
 </html>

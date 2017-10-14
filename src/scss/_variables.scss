@@ -62,9 +62,12 @@ $asideWidht: 188px;
 // input
 $inputBorderColor: $lightGrey;
 $inputFontWeight: $fontLight;
-$inputTextColor: $black;
+$inputTextColor: $darkGrey;
 $inputTextFontSize: 14px;
 $inputTextareaFontSize: 12px;
 $inputHoverBorderColor:#b1b1b1;
 $inputFocusBorderColor:$lightGrey;
-
+$inputHoverTextColor:$black; 
+$inputFocusTextColor:$black;
+// sidebar
+$sidebarMobileWidth: 60px;

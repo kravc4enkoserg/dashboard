@@ -1,4 +1,63 @@
 // Component var 
+//loader
+#loading{
+	background-color: $orange;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	margin-top: 0px;
+    top: 0px;
+    transition: opacity .3s linear, z-index .1s linear .3s;
+    &.hide{
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+#object{
+	width: 80px;
+	height: 80px;
+	background-color: #FFF;
+	-webkit-animation: animate 1s infinite ease-in-out;
+	animation: animate 1s infinite ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+} 
+
 // title
 %title{
     color: $titleColor;
@@ -8,7 +67,9 @@
 .page-title{
     @extend %title;
     text-transform: uppercase; 
-    
+    &.color-red{
+        color: $red;
+    } 
     &.small-title{
         @extend %title;
         font-size: $smallTitleFontSize;
@@ -69,6 +130,29 @@
     font-weight: $fontBold;
     color: $darkGrey;
 }
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+    ul{
+        li{
+            padding: 10px $defaultIndent;
+        }
+    }
+}
+.dropdown-wrap{
+    position: relative;
+    // &:hover{
+    //     .dropdown-menu{
+    //         display: block;
+    //     }  
+    // }
+}
 // table
 .table{
     border-collapse: collapse;
@@ -98,6 +182,7 @@
         th{
             padding: 30px 18px; 
             color: $grey; 
+            text-align: start;
         }
         td{
            position: relative;
@@ -158,7 +243,7 @@
         }
         a{
             display: inline-block;
-            padding: 12px 17px;;
+            padding: 12px 16px;;
         &:hover{
             @extend %activePaginationLink;
         }
@@ -224,10 +309,12 @@
 
    &:hover{
         border-color: $inputHoverBorderColor;
+        color:$inputHoverTextColor;
     }
 
     &:focus{
         border-color: $inputFocusBorderColor;
+        color: $inputFocusTextColor;
     }
 }
 
@@ -438,7 +525,7 @@
     }
    
     .panel-footer{
-       padding: 30px 0;
+       padding: $defaultIndent;
    }
 }
 // label group
@@ -501,6 +588,29 @@
                     margin-top: 36px;
                 }
 
+                .filtres-company{
+                    width: 895px;
+                    
+                    .input-group{
+                        width: 50%;
+                        
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+                .filtres-design{
+                    width: 100%;
+                    
+                    .input-group{
+                        width: 100%;
+                    }
+                }
+                .filtres-lang{
+                    width: 133px;
+                    margin-left: $defaultIndent;
+                }
+
                 .input-group{
                     
                 & + .input-group{
@@ -517,6 +627,48 @@
                 }   
             }
         }
+        &.login{
+            padding: 45px;
+            
+            .input-login{
+                width: 100%;
+
+                .input-user-data{
+                    position: relative;
+
+                    label{
+                        position: absolute;
+                        font-size: 18px;
+                        left: $defaultIndent;
+                        color: $darkGrey;
+                    } 
+                    input{
+                        width: 214px;
+                        
+
+                        &#loginName{
+                            padding-left: 42px;
+                            &:hover{
+                                label{
+                                    color: $black;
+                                }
+                            }
+                            &:focus{
+                                label{
+                                    color: $black;
+                                }
+                            }
+                        }
+                        &#password{
+                            padding-left: 52px;
+                        }
+                    } 
+                }
+                button{
+                        width: 165px;
+                }
+            }
+        }
     }
     .modal-footer{
         padding: $defaultIndent;
@@ -527,10 +679,15 @@
 // checkbox-wrap
 .checkbox-wrap{
     padding: 30px 0;
-
-    .checkboxes{
+     
+    &+.checkbox-wrap{
+        padding-left: 18px;
+        margin-left: $defaultIndent;
+        border-left: 1px solid $lightGrey;
+    }
+        .checkboxes{
         padding-top: 30px;
-        
+    
         .scrollbar-inner{
             flex-wrap: wrap;
             height: 515px;
@@ -538,9 +695,11 @@
         .checkbox-group{
             padding: 12px;
             margin-right: $defaultIndent;
+            position: relative;
             
             .icon{
-                margin-left: auto;
+                position: absolute;
+                right: 12px;
                 
                 &.link-show{
                     display: none;
@@ -564,6 +723,16 @@
     .checkbox-group{
         width: 30%;
     }
+}
+#add-banners-modal{
+    width: 1075px;
+    
+    .checkbox-group{
+        width: 93%;
+    }
+}
+#login-modal{
+    width: 720px;
 }
 
 // checkbox and radio btn
@@ -638,25 +807,92 @@ input{
     }
 }
 
-//select 
-.filtres{
-    
-    .input-wrap-row{
+// panel-form-postback
+.panel-form-postback{
+    padding: 36px $defaultIndent;
+    border-bottom: 1px solid $lightGrey;
 
-        .filtres-company{
-            width: 895px;
-            
-            .input-group{
-                width: 50%;
-                
-                input{
-                    width: 100%;
-                }
+    .filtres-postback{
+        width: 100%;
+
+        .input-group{
+            width: 33.33%;
+
+            &+.input-group{
+                margin-left: $defaultIndent;
             }
+                label{
+                    display: block;
+                    margin: 22px 0;
+                }
         }
-        .filtres-lang{
-            width: 133px;
-            margin-left: $defaultIndent;
+
+    }
+    .panel-form-postback-wrap{
+
+        .panel-form-message{
+            width: 50%;
+
+            &+.panel-form-message{
+                margin-left: $defaultIndent;
+            }
+
+            .form-name{
+                margin: 22px 0;
+            }
+            .textarea{
+                width: 100%;
+                height: 185px;
+            }
         }
     }
 }
+
+.postback-statuses{
+    border-bottom: 1px solid $lightGrey;
+    
+    .postback-statuses-checkbox{
+        width: 50%;        
+        padding: 0 $defaultIndent;
+
+        .scrollbar-inner{
+            flex-wrap: wrap;
+            height: 180px;
+            .checkbox-group{
+                width: 93%;
+            }
+        }
+    }
+    .postback-statuses-slider{
+        width: 50%;
+        padding: 30px $defaultIndent;
+        border-left: 1px solid $lightGrey;
+
+        .postback-slider{
+            margin-top: 50px;
+        }
+    }
+}
+
+// textarea (placeholder в две строки)
+// #textAreaWrap {
+//     position: relative;
+// }
+
+// #textArea {
+//     position: relative;
+//     z-index: 1;
+//     resize: none;
+//     background-color: transparent;
+//     border: 1px solid #a5a5a5;
+// }
+
+// #placeholderDiv {
+//     position: absolute;
+//     top: 0;
+//     padding: 19px 17px;
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 300;
+//     color: #333;
+//     font-size: 14px;
+// }

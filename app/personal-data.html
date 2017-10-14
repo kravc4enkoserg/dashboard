@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,148 +8,206 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Template</title>
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- myfont -->
     <link rel="stylesheet" href="css/myfont.css">
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-<!-- Header Start -->
-<header class="fixed-to-top header">
-    <div class="flex-container justify-content-end ">
-        <div class="user-controls flex-container align-items-center">
-            <div class="user-controls-item flex-container align-items-center">
-                <a class="icon icon-wallet"></a> 
-                $1,500.00 
-                <a class="icon icon-arrow-down"></a>
+    <!-- Header Start -->
+    <header class="fixed-to-top header">
+        <div class="flex-container justify-content-end ">
+            <div class="user-controls flex-container align-items-center">
+                <div class="user-controls-item flex-container align-items-center">
+                    <a class="icon icon-wallet"></a>
+                    $1,500.00
+                    <a class="icon icon-arrow-down"></a>
+                </div>
+                <div class="user-controls-item ">
+                    <a class="icon icon-notification">
+                        <span class="user-controls-notification"></span>
+                    </a>
+                </div>
+                <div class="user-controls-item flex-container align-items-center">
+                    <a class="icon icon-profile"></a>
+                    <a href="" class="link">Leonardo Dicaprio</a>
+                </div>
+                <div class="user-controls-item">
+                    <a class="icon icon-quit"></a>
+                </div>
             </div>
-            <div class="user-controls-item ">
-                <a class="icon icon-notification">
-                    <span class="user-controls-notification"></span>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Aside Start -->
+    <aside class="aside fixed-to-top">
+        <div class="menu-controls flex-container justify-content-sb align-items-center">
+            <div class="logo">
+                <a href="">
+                    <img src="../img/logo.png" alt="">
                 </a>
             </div>
-            <div class="user-controls-item flex-container align-items-center">
-                <a class="icon icon-profile"></a>
-                <a href="" class="link">Leonardo Dicaprio</a>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="user-controls-item">
-                <a class="icon icon-quit"></a>
+        </div>
+        <div class="aside-menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="text-center icon icon-general"></span>
+                        <span class="menu-link">General</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="details.html">
+                        <span class="text-center icon icon-details"></span>
+                        <span class="menu-link">Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="links.html">
+                        <span class="text-center icon icon-links"></span>
+                        <span class="menu-link">Links</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="banners.html">
+                        <span class="text-center icon icon-banners"></span>
+                        <span class="menu-link">Banners</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="personal-data.html">
+                        <span class="text-center icon icon-personaldata"></span>
+                        <span class="menu-link">Personal data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="payout.html">
+                        <span class="text-center icon icon-payout"></span>
+                        <span class="menu-link">Payout</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="postback.html">
+                        <span class="text-center icon icon-postback"></span>
+                        <span class="menu-link">Postback</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="your-manager">
+                <h3 class="page-title small-title">Your manager</h3>
+                <div class="manager-info flex-container align-items-center">
+                    <div class="manager-foto">
+                        <img src="..//img/manager-foto.png" alt="">
+                        <div class="status online"></div>
+                    </div>
+                    <a href="" class="link">Mikhael E.</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Aside End -->
+    <main>
+        <div class="content-wrapper">
+            <div class="panel">
+                <div class="panel-header">
+                    <h3 class="page-title">Personal data</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-form row">
+                        <form>
+                            <div class="label-group">
+                                <label class="section-title" for="user-name">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-surname">Surname</label>
+                                <input type="text" class="form-control" id="user-surname">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-email">E-mail</label>
+                                <input type="text" class="form-control" id="user-email">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-phone">Phone namber</label>
+                                <input type="text" class="form-control" id="user-phone">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-form row">
+                        <form>
+                            <div class="label-group">
+                                <label class="section-title" for="user-skype">Skype</label>
+                                <input type="text" class="form-control" id="user-skype">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-icq">ICQ</label>
+                                <input type="text" class="form-control" id="user-icq">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-msn">Msn</label>
+                                <input type="text" class="form-control" id="user-msn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-form row">
+                        <form>
+                            <div class="label-group">
+                                <label class="section-title" for="user-wallet">Wallet</label>
+                                <input type="text" class="form-control" id="user-wallet">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-form row">
+                        <form>
+                            <div class="label-group">
+                                <label class="section-title" for="user-password">Password</label>
+                                <input type="password" class="form-control" id="user-password">
+                            </div>
+                            <div class="label-group">
+                                <label class="section-title" for="user-repeat">Repeat</label>
+                                <input type="password" class="form-control disabled" id="user-repeat" disabled>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-row text-center">
+                        <a href="" class="btn btn-action">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div id="object"></div>
             </div>
         </div>
     </div>
-</header>
-<!-- Header End -->
-<!-- Aside Start -->
-<aside class="aside fixed-to-top">
-    <div class="menu-controls flex-container justify-content-sb align-items-center">
-        <div class="logo">
-            <a href=""><img src="../img/logo.png" alt=""></a>
-        </div>
-        <div class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </div>
-    <div class="aside-menu">
-        <ul>
-            <li><a href=""><span class="icon icon-general"></span>General</a></li>
-            <li><a href="details.html"><span class="icon icon-details"></span> Details</a></li>
-            <li><a href="links.html"><span class="icon icon-links"></span>Links</a></li>
-            <li><a href="banners.html"><span class="icon icon-banners"></span>Banners</a></li>
-            <li class="active"><a href="personal-data.html"><span class="icon icon-personaldata"></span>Personal data</a></li>
-            <li><a href="payout.html"><span class="icon icon-payout"></span>Payout</a></li>
-            <li><a href="postback.html"><span class="icon icon-postback"></span>Postback</a></li>
-        </ul>
-        <div class="your-manager">
-            <h3 class="page-title small-title">Your manager</h3>
-            <div class="manager-info flex-container align-items-center">
-                <div class="manager-foto">
-                    <img src="..//img/manager-foto.png" alt="">
-                    <div class="status online"></div>
-                </div>
-                <a href= "" class="link">Mikhael E.</a>
-            </div>
-        </div>
-    </div>
-</aside>
-<!-- Aside End -->
-<main>
-    <div class="content-wrapper">
-        <div class="panel">
-            <div class="panel-header">
-                <h3 class="page-title">Personal data</h3>
-            </div>
-            <div class="panel-body">
-                <div class="panel-form row">
-                    <form>
-                        <div class="label-group">
-                            <label class="section-title" for="user-name">Name</label>
-                            <input type="text" class="form-control" id="user-name">
-                        </div>
-                        <div class="label-group">
-                            <label class="section-title" for="user-surname">Surname</label>
-                            <input type="text" class="form-control" id="user-surname">
-                        </div>
-                        <div class="label-group">
-                            <label class="section-title" for="user-email">E-mail</label>
-                            <input type="text" class="form-control" id="user-email">
-                        </div>
-                        <div class="label-group">
-                            <label class="section-title" for="user-phone">Phone namber</label>
-                            <input type="text" class="form-control" id="user-phone">
-                        </div>
-                    </form>
-                </div>
-                <div class="panel-form row">
-                    <form>
-                        <div class="label-group">
-                            <label class="section-title" for="user-skype">Skype</label>
-                            <input type="text" class="form-control" id="user-skype">
-                        </div>
-                        <div class="label-group">
-                            <label class="section-title" for="user-icq">ICQ</label>
-                            <input type="text" class="form-control" id="user-icq">
-                        </div>                        
-                        <div class="label-group">
-                            <label class="section-title" for="user-msn">Msn</label>
-                            <input type="text" class="form-control" id="user-msn">
-                        </div>
-                    </form>
-                </div>
-                <div class="panel-form row">
-                    <form>
-                        <div class="label-group">
-                            <label class="section-title" for="user-wallet">Wallet</label>
-                            <input type="text" class="form-control" id="user-wallet">
-                        </div>
-                    </form>
-                </div>
-                <div class="panel-form row">
-                    <form>
-                        <div class="label-group">
-                            <label class="section-title" for="user-password">Password</label>
-                            <input type="password" class="form-control" id="user-password">
-                        </div>
-                        <div class="label-group">
-                            <label class="section-title" for="user-repeat">Repeat</label>
-                            <input type="password" class="form-control disabled" id="user-repeat" disabled>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="panel-footer">
-                <div class="btn-row text-center">
-                    <a href="" class="btn btn-action">Save</a>
-                </div>  
-            </div>
-        </div>
-    </div>
-</main>
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src="js/jquery.bpopup.min.js"></script>
+    <script src=js/jquery.formstyler.min.js></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <!-- init plugins -->
+    <script src="js/init.js"></script>
 
+    <!-- plugin js -->
+    <script src="js/plugins.min.js"></script>
 </body>
+
 </html>
